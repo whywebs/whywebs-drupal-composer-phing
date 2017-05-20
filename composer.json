@@ -42,6 +42,6 @@
       "./vendor/bin/phplint --no-cache",
       "./vendor/bin/phpcs --config-set installed_paths ./../../drupal/coder/coder_sniffer",
       "./vendor/bin/phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=php,inc themes || true"
-    ],
+    ]
   }  
 }

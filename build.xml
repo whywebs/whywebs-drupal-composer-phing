@@ -41,31 +41,6 @@
         <echo msg="${message}"/>
     </target>
     
-    <!-- Drupal build tasks  full install without composer using phing only-->
-<!--    <target name="drupal:build"-->
-<!--    depends="php-check,-->
-<!--    dockerCheck,-->
-<!--    dockerInstall,-->
-<!--    composer-check,-->
-<!--    composer-download,-->
-<!--    composerUpdate,-->
-<!--    composerInstall,-->
-<!--    drupal:drush:make,-->
-<!--    drupal:cleanup-temp,-->
-<!--    drupal:symlink:profiles, drupal:symlink:sites, drupal:symlink:themes, drupal:symlink:modules, drupal:symlink:features, drupal:symlink:files, drupal:symlink:private,-->
-<!--    drupal:compass:compile,-->
-<!--    drupal:overwrite,-->
-<!--    drupal:move,-->
-<!--    drupal:chmod"-->
-<!--    description="Build the Drupal codebase" />-->
-<!--    -->
-<!--    <target name="drupal:revert"-->
-<!--    depends="drupal:updatedb,-->
-<!--    drupal:registry-rebuild,-->
-<!--    drupal:features-revert-all,-->
-<!--    drupal:cache-clear"-->
-<!--    description="Update the current site install with the new codebase." />-->
-
     <!-- Drupal build tasks -->
     <target name="drupal:build"
     depends="php-check,
@@ -314,9 +289,9 @@
                 <echo msg="Compiling SCSS..." />
                 <exec command="compass compile ${absname}" logoutput="true" checkreturn="true" />
                 
-                <!-- Or use the command below -->
-                <echo msg="Installing npm for each theme..." />
-                <exec command="npm install" dir="${absname}" logoutput="true" checkreturn="true" />
+<!--                <!-- Or use the command below -->-->
+<!--                <echo msg="Installing npm for each theme..." />-->
+<!--                <exec command="npm install" dir="${absname}" logoutput="true" checkreturn="true" />-->
             </then>
         </if>
         <echo msg="${message}"/>

@@ -7,3 +7,4 @@ public/*
 deploy/*
 sites/*/settings.php
 vendor/*
+pre_installation_whywebs/*

@@ -1,0 +1,79 @@
+name = Whywebs 2017
+description =  whywebs Template.
+core = 7.x
+
+; ========================================
+; Regions
+; ========================================
+
+regions[top_menu]       = 'Header Menu'
+regions[header]       = 'Header'
+regions[banner]       = 'Banner'
+regions[highlight]    = 'Highlight'
+regions[title]        = 'Title'
+regions[main_prefix]  = 'Main Region Prefix'
+regions[homepage_intro] = 'Homepage top Intro'
+regions[homepage_1] = 'Homepage Secret Weapons'
+regions[homepage_2] = 'Homepage We Serve'
+regions[intro]        = 'Intro'
+regions[cta]          = 'CTA'
+regions[content]      = 'Main Region'
+regions[main_suffix]  = 'Main Region Suffix'
+regions[sidebar_first]  = 'Sidebar First'
+regions[sidebar_second] = 'Sidebar Second'
+regions[main_suffix_menu_1] = 'Bottom Menu 1'
+regions[main_suffix_menu_2] = 'Bottom Menu 2'
+regions[main_suffix_menu_3] = 'Bottom Menu 3'
+regions[main_suffix_menu_4] = 'Bottom Menu 4'
+regions[main_suffix_menu_5] = 'Bottom Menu 5'
+regions[footer]       = 'Footer'
+
+; ========================================
+; Stylesheets
+; ========================================
+
+stylesheets[all][] = 'css/style.css'
+stylesheets[print][] = 'css/print.css'
+
+; ========================================
+; features
+; ========================================
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; ========================================
+; Scripts
+; ========================================
+ scripts[] = 'js/script.js'
+ scripts[] = 'js/script2.js'
+; ========================================
+; Modernizr
+; ========================================
+
+; ========================================
+; features and extras
+; ========================================
+
+features[] = logo "red box"
+features[] = node_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+
+settings[toggle_logo] = 1
+settings[toggle_node_user_picture] = 1
+settings[toggle_favicon] = 1
+settings[toggle_main_menu] = 1
+settings[toggle_secondary_menu] = 1
+
+modernizr[tests][] = css_boxsizing
+
+settings[aurora_typekit_id] =

@@ -1,0 +1,65 @@
+/**
+ * Defaults: For any general elements to apply to the whole page.
+ */
+
+ @include add-grid(3);
+ @include add-grid(6 at $tablet);
+ @include add-grid(12 at $desktop);
+ @include add-gutter(1/5);
+
+ .wrapper {
+   @include grid;
+   @include clearfix;
+ }
+
+ // Sidebars
+ #sidebar-first {
+   @include breakpoint($tablet) {
+     @include grid-span(1, 1);
+   }
+   @include breakpoint($desktop) {
+     @include grid-span(3, 1);
+   }
+ }
+
+ #sidebar-second {
+   @include breakpoint($tablet) {
+     @include grid-span(2, 5);
+   }
+   @include breakpoint($desktop) {
+     @include grid-span(3, 10);
+   }
+ }
+
+ .one-sidebar {
+   #main {
+     @include breakpoint($tablet) {
+       @include grid-span(5, 2);
+     }
+     @include breakpoint($desktop) {
+       @include grid-span(9, 4);
+     }
+   }
+ }
+
+ .sidebar-second.one-sidebar {
+   #main {
+     @include breakpoint($tablet) {
+       @include grid-span(4, 1);
+     }
+     @include breakpoint($desktop) {
+       @include grid-span(9, 1);
+     }
+   }
+ }
+
+ .two-sidebars {
+   #main {
+     @include breakpoint($tablet) {
+       @include grid-span(4, 2);
+     }
+     @include breakpoint($desktop) {
+       @include grid-span(6, 4);
+     }
+   }
+ }

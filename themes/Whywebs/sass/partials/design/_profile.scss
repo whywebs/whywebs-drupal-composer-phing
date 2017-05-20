@@ -1,0 +1,190 @@
+.profile {
+  
+  .field {
+    @include breakpoint($mobile) {
+      margin-bottom: 20px;
+    }
+  }
+  .user-picture {
+    float: none;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    @include breakpoint($tablet-only) {
+      @include float-span(1.5);
+      border-radius: 50%;
+    }
+    @include breakpoint($desktop) {
+      @include float-span(2.5);
+      border-radius: 50%;
+    }
+  }
+  .field-name-field-function{
+  color:$red;
+  }
+  .field-name-field-last-name,
+  .field-name-field-first-name {
+    display: inline-block;
+    font-size: 26px;
+    font-family: $font-heading;
+     @include breakpoint($tablet) {
+      margin-top: 130px;
+    }
+  }
+    
+.connect-with-me{
+  h2{
+     position:relative;
+     font-size: 22px;
+     line-height:31px;
+     font-family: "FuturaBT-Heavy",sans-serif;
+     color: #263159;
+    } 
+    display:inline-block;
+    width:auto;
+    position:relative;
+    margin-bottom: 20px;
+    legend {
+      display:inline-block;
+      width:auto;
+      position:relative;
+      font-size: 22px;
+      line-height:31px;
+      font-family: "FuturaBT-Heavy",sans-serif;
+      color: #263159;
+    }
+  }
+  .field-name-field-body {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .field-name-field-email {
+    vertical-align:middle;
+    margin-bottom: 20px;
+    padding-left:15px;
+    text-align:center;
+    display:inline-block;
+    width:auto;
+       a {
+        text-indent: -9999px;
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background: url('../img/p_mail.png') no-repeat;
+    }
+  }
+  
+
+  .message-member {
+        display: none;
+  } 
+  .field-name-field-telephone-number {
+  vertical-align:middle;
+    margin-bottom: 20px;
+    padding-left:15px;
+    text-align:center;
+    display:inline-block;
+    width:auto;
+    a {
+        text-indent: -9999px;
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background: url('../img/p_phone.png') no-repeat;
+        @include breakpoint($desktop) {
+            &:hover{text-indent:0;width:200px;
+          }
+        }
+          @include breakpoint($desktop) {
+            &:hover{text-indent:0;width:200px;
+          }
+          }
+          @include breakpoint($medium) {
+            &:hover{text-indent:0;width:200px;
+          }
+        }
+      }
+  }
+  .field-name-field-linkedin-profile {
+  vertical-align:middle;
+    margin-bottom: 20px;
+    padding-left:15px;
+    text-align:center;
+    display:inline-block;
+    width:auto;
+    a {
+        text-indent: -9999px;
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background: url('../img/p_linkedin.png') no-repeat;
+    }
+  }
+  .field-name-field-twitter {
+  vertical-align:middle;
+    margin-bottom: 20px;
+    padding-left:15px;
+    text-align:center;
+    display:inline-block;
+    width:auto;
+    a {
+        text-indent: -9999px;
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background-repeat: no-repeat;
+        -moz-background-size: cover;       
+        background: url('../img/p_twitter.png') no-repeat;
+    }
+  }
+  
+  .field-group-div,
+  .group-more-about {
+    clear: both;
+    margin-bottom: 20px;
+    > h2 {
+      font-size: 22px;
+      text-transform: none;
+    }
+  }
+  
+  .group-info {
+    border: none;
+    margin: 0;
+    @include clearfix;
+    > h3 {
+      display: none;
+    }
+    .field-group-div {
+      @include grid-2;
+    }
+  }
+  
+  .group-more-about {
+    margin-top: 40px;
+    display: inline-block;
+  }
+  
+  .field-collection-container {
+    margin: 0;
+    border: none;  
+  }
+  
+  .field-name-field-more-about
+    
+    > .field-item {
+      margin-bottom: 20px;
+      @include grid-2;
+    }
+    
+    .field-collection-view {
+      margin: 0;
+      padding: 0;
+      border: none;
+    .field-name-field-more-about-label {
+      float: left;
+      margin: 0 5px 0 0 ;
+      font-weight: $bold;
+    }
+  } 
+}

@@ -1,0 +1,176 @@
+////////////////////////
+// Mixins Partials
+//
+// All of your mixins should go in this file.
+////////////////////////
+
+//
+// Grid mixins
+//
+
+// Set grid
+@mixin grid {
+  max-width: $max-width;
+  min-width: $min-width;
+  width: 90%;
+  margin: 0 auto;
+  @include background-grid;
+}
+
+// Grid 2
+@mixin grid-2 {
+  @include breakpoint($desktop) {
+    @include float-span(6);
+    &:nth-child(2n+2) {
+      @include float-span(6, 'last');
+    }
+  }
+  @include breakpoint($tablet) {
+    @include float-span(3);
+    &:nth-child(2n+2) {
+      @include float-span(3, 'last');
+    }
+  }
+}
+
+// Grid 3
+@mixin grid-3 {
+  @include breakpoint($desktop) {
+    @include float-span(4);
+    &:nth-child(3n+3) {
+      @include float-span(4, 'last');
+    }
+  }
+  @include breakpoint($tablet) {
+    @include float-span(2);
+    &:nth-child(3n+3) {
+      @include float-span(2, 'last');
+    }
+  }
+}
+
+// Grid 4
+@mixin grid-4 {
+  @include breakpoint($desktop) {
+    @include float-span(3);
+    &:nth-child(4n+4) {
+      @include float-span(3, 'last');
+    }
+  }
+  @include breakpoint($tablet) {
+    @include float-span(3);
+    &:nth-child(2n+2) {
+      @include float-span(3, 'last');
+    }
+  }
+}
+
+// Grid 6
+@mixin grid-6 {
+  @include breakpoint($desktop) {
+    @include float-span(2);
+    &:nth-child(6n+6) {
+      @include float-span(2, 'last');
+    }
+  }
+  @include breakpoint($tablet) {
+    @include float-span(2);
+    &:nth-child(3n+3) {
+      @include float-span(2, 'last');
+    }
+  }
+}
+
+
+//
+// Shadows
+//
+
+@mixin shadow {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .2);
+}
+
+// Button
+
+@mixin button {
+	background: $orange;
+	padding: 8px 9px 6px 9px;
+	border: none;
+	text-transform: uppercase;
+	color: $white;
+	margin-right: 5px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	line-height: 1;
+	text-align: center;
+	font-size: 12px;
+	font-family: $font-heading;
+	border-radius: 3px;
+	display: inline-block;
+	&:hover {
+  	color: $white;
+		background: darken($orange, 10%);
+	}
+}
+
+// hide text
+
+$default-height: 50px;
+$default-width: 50px;
+
+@mixin hide-text($default-width, $default-height) {
+  display: inline-block;
+  height: 0;
+  width: $default-width;
+  padding-top: $default-height;
+  overflow: hidden;
+}
+
+@mixin no-text {
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
+  &:after,
+  &:before {
+    font-size: $base-font-size;
+    letter-spacing: normal;
+    color: $text-color;  
+  }
+}
+
+// transition
+
+$default-transition: all;
+@mixin transition($trans: $default-transition) {
+	transition: $trans 0.3s ease;
+}
+
+// sub heading
+
+@mixin subheading {
+  font-family: $font-heading;
+  color: $blue;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+// views row
+
+@mixin row {  
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: solid 1px $border-color;
+  @include breakpoint($tablet) {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+}
+@mixin row-small {  
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: solid 1px $border-color;
+  @include breakpoint($tablet) {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,91 @@
+#footer {
+  background: $red;
+  color: $white;
+  width:100%;
+  padding: 1em 0 0 0;
+  margin-top: 2px;
+  bottom:0;
+  font-size: 16px;
+      overflow: hidden;
+  a {
+    color: $white;
+    &:hover {
+      color: $black;
+    }
+  }
+  
+  .block {
+  vertical-align: middle;
+  display:inline-block;
+    margin-bottom: 2px;
+  }
+  
+  .block-block {
+  display:inline-block;
+    @include breakpoint($tablet) {
+    float:right;
+      display:inline-block;
+    }
+  }
+}
+
+#block-menu-menu-footer-menu {
+min-width:300px;
+bottom-margin:4px;
+  @include breakpoint($desktop) {
+    float: left;
+    vertical-align: middle;
+  }
+  ul.menu {
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @include breakpoint($desktop) {
+        display: inline-block; 
+        margin-right: 1em;
+        &:last-child {
+          margin-right: 0;
+        } 
+      }
+      a {
+        font-family: $font-heading;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+// social icons
+  .social-bottom-links{
+  @include breakpoint($desktop) {
+  margin-top: -4px;
+  vertical-align: middle;
+  text-align:center;
+  display:inline-block;
+  float:top;
+  }
+}
+  .copyright-right{
+    margin-right: 30%;
+  text-align:center;
+  vertical-align: middle;
+  display:inline-block;
+  @include breakpoint($desktop){
+  text-align:center;
+  }
+  @include breakpoint($tablet-only){
+  text-align:center;
+  }
+  @include breakpoint($mobile){
+    float:left;
+    font-size:8px;
+  }
+}
+.centered{
+  text-align:center;
+  vertical-align:middle;
+}
+.float-right{
+  @include grid-span(6, 5);
+}
+

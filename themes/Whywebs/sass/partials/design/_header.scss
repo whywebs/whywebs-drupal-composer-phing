@@ -1,0 +1,94 @@
+#header {
+  position:fixed;
+  opacity:0.8;
+  width:100%;
+  height:50px;
+  background: $black;
+  padding: 3px 0 5px 0;
+  z-index:10;
+  
+  .wrapper {
+      padding-left: 120px;
+      position: relative;
+      @include breakpoint($desktop) {
+      padding-left: 120px;
+      position: relative;  
+      }
+
+  }
+  &.menu-left{
+    overflow:hidden;
+    left:0;
+    height:100%;
+    width:80px;
+    .wrapper {
+      padding-left: 0px;
+      width:80px !important;
+      height:auto;
+      @include breakpoint($desktop) {
+          padding-left: 0px;
+          width:80px !important;
+      }
+    }
+    -webkit-animation-name: head; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: head;
+    animation-duration: 1s;
+    animation-direction: reverse;
+
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes head {
+          from {
+                left:0;
+                height:100%;
+                width:80px;
+                }
+          to {
+              width:100%;
+              height:50px;
+              }
+      }
+
+      /* Standard syntax */
+      @keyframes head {
+           from {
+                left:0;
+                height:100% !important;
+                width:80px !important;
+                }
+          to {
+              width:100%;
+              height:50px;
+              }
+            }
+      }
+  }
+
+#logo {
+  img {
+    width: 100px;
+   float:left;
+  }
+}
+
+// blockify
+
+#block-blockify-blockify-logo {
+  display: inline-block;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    left:0;
+    top:0; 
+    vertical-align:middle;
+
+}
+
+#block-views-profile-top-block-3{
+  display: block;
+  width: 200px;
+  height: 150px;
+  float:right;
+
+}
+

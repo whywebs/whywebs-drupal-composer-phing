@@ -1,0 +1,90 @@
+.node-page {
+  &.view-mode-full {
+    .field-name-body {
+      @include grid;
+    }
+  }
+}
+
+// basic page
+
+.node-type-page {
+  #main {
+    padding: 0;
+  }
+  .field-name-body {
+    display: none;
+  }
+}
+
+
+
+// event 
+
+.node-type-event {
+  .group-left {
+    background: $grey;
+    padding: 2em 0;
+    .field-name-field-content-image {
+      @include grid;
+      text-align: center;
+    }
+  }
+  .field-collection-tabs {
+    div{
+    a {
+        color: $red;
+        &:hover {
+        color: $blue;
+        }
+      }
+    }
+    border: none;
+    padding: 0;
+    margin: 0;
+    > .item-list {
+      border-bottom: solid 2px $border-color;
+    }
+    .ui-tabs-nav {
+      @include grid;
+      background: none;
+      padding: 0;
+      border: none;
+      text-align: center;
+      li {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        background: none;
+        float: none;
+        display: inline-block;
+        margin-bottom: -6px;
+        &.ui-state-active a {
+          border-bottom: solid 4px $blue-light;
+        }
+        a {
+          padding: 1.4em 1em 1em 1em;
+          font-size: 14px;
+          font-family: $font-heading;
+          color: $blue;
+          text-transform: uppercase;
+          border-bottom: solid 4px transparent;
+          &:hover {
+            border-bottom: solid 4px $blue-light;
+          }
+        }
+      }
+    }
+  }
+  .ui-tabs-panel {
+    @include grid;
+    padding: 2em 0 1em 0;
+    @include breakpoint($tablet) {
+      padding: 4em 0 1em 0;
+    }
+    h3 {
+      @include subheading;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+#comments {
+  h2 {
+    text-transform: none;
+  }
+  .filter-wrapper {
+    display: none;
+  }
+}
+
+.comment {
+  @include row;
+  
+  ul.links {
+    margin-top: 1em;
+    display: inline-block;
+    li {
+      padding: 0;
+      display: inline-block;
+      margin-right: 0.5em;
+      &Last-of-type {
+        margin-right: 0;
+      }
+    }
+    a {
+      @include button;
+    }
+  }
+}

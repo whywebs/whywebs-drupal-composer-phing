@@ -1,0 +1,261 @@
+
+#block-whywebs-login-whywebs-login-block, #block-menu-menu-homepage{
+  z-index: 99;
+    &.menu-left{
+      ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    float: left;
+    width:80px;
+    margin-top: 100px;
+    left:0;
+    position: relative;
+    > li {
+      float:left;
+      list-style: square;
+      display: inline-block;
+      padding-bottom: 1em;
+      width:70px;
+      text-align:center;
+      a {
+        color: $white;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        padding: 0 0 0 0;
+        line-height: 1;
+        font-size: 12px;
+        display: inline-block;
+        &:hover {
+          color: $red;
+        }
+      }
+      
+      a {
+          border: solid 2px $white;
+          padding: 0.1em 0.2em 0.1em 0.2em;
+          &:hover {
+            border-color: $red;
+          }
+        }
+      
+      ul {
+        text-align: left;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        width: 200px;
+        background: $red;
+        display: none;
+        li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          border-bottom: solid 1px $white;
+          a {
+            font-size: 14px;
+            padding: 1em 1em;
+            display: block;
+            &:hover {
+              background: $dark;
+            }
+            
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }   
+  }
+   } 
+   ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    float: right;
+    margin-top: 4px;
+    margin-bottom: -1em;
+    position: relative;
+    > li {
+      
+      list-style: square;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 1em;
+      a {
+        color: $white;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        padding: 0.3em 0 0.2em 0;
+        line-height: 1;
+        font-size: 16px;
+        display: inline-block;
+        &:hover {
+          color: $red;
+        }
+      }
+      
+      a {
+          border: solid 2px $white;
+          padding: 0.3em 1em 0.2em 1em;
+          &:hover {
+            border-color: $red;
+          }
+        }
+      
+      ul {
+        text-align: left;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        width: 200px;
+        background: $red;
+        display: none;
+        li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          border-bottom: solid 1px $white;
+          a {
+            font-size: 14px;
+            padding: 1em 1em;
+            display: block;
+            &:hover {
+              background: $dark;
+            }
+            
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }   
+  }
+
+}
+
+#block-menu-menu-homepage-menu, #block-system-main-menu {
+  @include breakpoint($desktop) {
+    float: right;
+    margin-top: 4px;
+    margin-bottom: -1em;
+    z-index: 99;
+    position: relative;
+  }
+  .content > ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    > li {
+      list-style: square;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 1em;
+      a {
+        color: $white;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        padding: 0.3em 0 0.2em 0;
+        line-height: 1;
+        font-size: 16px;
+        &:hover {
+          color: $dark;
+        }
+      }
+      &:nth-last-child(2) {
+       > a {
+          border: solid 2px $white;
+          padding: 0.3em 1em 0.2em 1em;
+          &:hover {
+            border-color: $dark;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          background: $red;
+          padding: 0.3em 1em 0.2em 1em;
+          &:hover {
+            background: darken($dark, 10%);
+            color: $grey;
+          }
+        }
+      }
+      ul {
+        text-align: left;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        width: 200px;
+        background: $red;
+        display: none;
+        li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          border-bottom: solid 1px $white;
+          a {
+            font-size: 14px;
+            padding: 1em 1em;
+            display: block;
+            &:hover {
+              background: $dark;
+            }
+            
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }   
+  }
+}
+
+// sidr responsive menu
+.sidr {
+  background: $black;
+  box-shadow: none;
+  ul {
+    border-color: $white;
+    li {
+      border-top: none;
+      border-color: $dark-grey;
+      line-height: 40px !important;
+      a {
+        box-shadow: none !important;
+        &:hover {
+          background: darken($grey, 10%);
+        }
+      }
+    }
+  }
+  .sidr-class-contextual-links-wrapper {
+    display: none;
+  }
+}
+#sidr-0-button {
+float:left;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    text-indent: -99999px;
+    display: inline-block;
+    background: url(../img/b_menu.png) no-repeat center;
+    background-size: 100%;
+  &:active {
+  text-indent: -99999px;
+  background-size: 50%;
+    background: url(../img/b_menux.png) no-repeat center;
+  }
+}

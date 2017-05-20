@@ -1,0 +1,408 @@
+// default
+
+.block {
+  .content {
+    > h2 {
+      margin-bottom: 20px;
+      @include breakpoint($tablet) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+// image block 
+
+.block-imageblock {
+  @include clearfix;
+  .block-image {
+     @include breakpoint($mobile) {
+      float: right;
+      margin: 0 0 0 10px;
+      max-width: 150px;
+    }
+    
+    @include breakpoint($tablet-only) {
+      @include grid-span(3, 4);
+      margin-top: -68px;
+      text-align: right;
+    }
+    @include breakpoint($desktop) {
+      @include grid-span(6, 7);
+      margin-top: -68px;
+      text-align: right;
+    }
+  }
+}
+
+
+
+
+
+// event sponsors
+.events-sponsor-bottom,
+#block-views-events-2-event-sponsors-right {
+    text-align: center;
+    display: inline-block;
+    position:relative;
+    border-style:none;
+    width:100%;
+    @include breakpoint($mobile){
+    right:0;
+    }
+     @include breakpoint($tablet-only){
+    right:0;
+    }
+     @include breakpoint($medium){
+    right:0;
+    }
+     .views-row {
+           @include breakpoint($tablet) {
+          text-align: center;
+          display: inline-block;
+          padding:5px;
+          border-style:none;
+        }
+        @include breakpoint($desktop) {
+          text-align: center;
+          display: inline-block;
+          padding:5px;
+          border-style:none;
+
+        }
+    }
+    .view-id-events_2{
+    width:100%;
+    }
+}
+
+#oi-commerce-alter-event-checkout-button-form {
+  margin-top: 20px;
+  fieldset {
+    border: none;
+     border-bottom: dotted 1px $text-color;
+    padding: 0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .event-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .event-price,
+  .event-price-gbp,
+  .event-price-eur {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .event-price-gbp,
+  .event-price-eur {
+    margin-left: 30px;
+  }
+}
+
+.event-register-page {
+  .field-name-field-tab-title {
+    display: none;
+  }
+}
+#block-views-homepage-content-block-1{
+  z-index:1;
+  text-align:center;
+  table{
+    text-align:center;
+    @include float-span(3);
+             td{
+             z-index:2;
+             padding: 2em;
+             display: inline-block;
+             text-align:center;
+             
+               min-width:220px;
+         }
+    .views-field-title {
+               max-width:220px;
+               @include float-span(3);
+               }
+  }
+}
+
+
+////////login block///////////
+
+#modalBackdrop {
+  position: fixed !important;
+  
+}
+
+#block-user-login {
+
+  top:10% !important;
+  right: 0% !important;
+  height:150px;
+  width:auto;
+  display:block;
+  overflow:auto;
+  float:right;
+    div{
+      display: inline-table;
+      font-size:12px;
+      color:$white;
+     padding:2px;
+     margin:0;
+     .item-list{
+     display:none;
+     }
+    }
+    input[type=text]{
+    color:$black;
+    }
+  #user-login-form {
+
+      .form-item {    
+     max-width:150px;
+     height:100px;
+        label{
+        display:none;
+       }
+  }
+  }
+}
+
+.whywebs-login-links-wrapper {
+  text-align: right;
+  font-size: 12px;
+
+  .whywebs-login-links li {
+
+  padding-left: 1em;
+    a {
+        border-bottom: 1px dashed #ccc;
+    }
+  }
+}
+
+
+.whywebs-login-links .ajax-progress {
+  display: none;
+}
+
+ #whywebs-login-user-register-form-wrapper{
+  position: absolute !important;
+  display: block;
+  top:15%;
+  left:29%;
+  background: $black;
+  opacity:0.8;
+  border:2px solid $white;
+  width:40%;
+
+ }
+form{
+  &.user-info-from-cookie {
+          position: relative;
+          display: block;
+          width:100% !important;
+            .form-item{
+              width:100% !important;
+            }
+        }       
+             
+  }
+
+
+
+#user-register-form{
+    legend > span{
+  display:none;
+  }
+
+   .password-strength, .password-confirm, .confirm-parent{
+      display:inline-block;
+      position:relative;
+      width:100%;
+        .ok{
+          color:$white;
+        }
+        .error{
+          color:$red;
+        }
+   }   
+    div.password-suggestions {
+    display:inline-block;
+    position:relative;
+    width:100%;
+  }
+  display:inline-block;
+  position:relative;
+  input[type=radio] + label {
+    cursor: pointer;
+    color: $white;
+    font-style: italic;
+    display:block;
+    background: $dark;
+    capacity:0.5;
+  }
+
+  label {
+  width: 100%;
+  text-align:center;
+  }
+  input[type=radio]{
+    display:none;
+  }
+  input[type=text]{
+  color:$black;
+  }
+  input[type="password"]{
+  color:$black;
+  }
+  input[type=radio]:checked + label {
+    color: $white;
+    cursor: pointer;
+    font-style: normal;
+    display:block;
+    background: $red;
+    &:before {
+          position:relative;
+
+          content: " Weclome ";
+          }
+    &#edit-field-student-or-tutor-und-6{
+        &:before {
+          background: $blue;
+          display:inline-block;
+          position:absolute;
+          content: " Weclome ";
+          color:$white;
+        }
+    }
+    &#edit-field-student-or-tutor-und-5{
+         &:before {
+          background: $red;
+          display:inline-block;
+          position:absolute;
+          content: " Weclome ";
+          color:$white;
+        }
+    }
+  }  
+      input{
+      width:100% !important;
+      height:auto;
+      }
+  #edit-field-student-or-tutor-und > div{
+  display:inline-block;
+  position:relative;
+  width: 49%;
+    line-height: 300%;
+    padding:0 0 0 0;
+    font-weight: bold;
+    font-family: cursive;
+  }
+  #edit-field-student-or-tutor > div > label{
+    display:none;
+  }
+  #edit-field-student-or-tutor, div{
+    display:block;
+    padding:2px;
+    margin:0;
+    position: relative;
+  }
+}
+
+
+#user-login, .user-info-from-cookie{
+  legend > span{
+  display:none;
+  }
+  display:inline-block;
+  position:relative;
+  input[type=radio] + label {
+    cursor: pointer;
+    color: $white;
+    font-style: italic;
+    display:block;
+    background: $dark;
+    capacity:0.5;
+  }
+
+  label {
+  width: 100%;
+  text-align:center;
+  }
+  input[type=radio]{
+    display:none;
+  }
+  input[type=text]{
+  color:$black;
+  }
+  input[type="password"]{
+  color:$black;
+  }
+  input[type=radio]:checked + label {
+    color: $white;
+    cursor: pointer;
+    font-style: normal;
+    display:block;
+    background: $red;
+    &:before {
+          position:relative;
+
+          content: " Weclome ";
+          }
+    &#edit-field-student-or-tutor-und-6{
+        &:before {
+          background: $blue;
+          display:inline-block;
+          position:absolute;
+          content: " Weclome ";
+          color:$white;
+        }
+    }
+    &#edit-field-student-or-tutor-und-5{
+         &:before {
+          background: $red;
+          display:inline-block;
+          position:absolute;
+          content: " Weclome ";
+          color:$white;
+        }
+    }
+  }  
+      input{
+      width:100% !important;
+      height:auto;
+      }
+  #edit-field-student-or-tutor-und > div{
+  display:inline-block;
+  position:relative;
+  width: 49%;
+    line-height: 300%;
+    padding:0 0 0 0;
+    font-weight: bold;
+    font-family: cursive;
+  }
+  #edit-field-student-or-tutor > div > label{
+    display:none;
+  }
+  #edit-field-student-or-tutor, div{
+    display:block;
+    padding:2px;
+    margin:0;
+    position: relative;
+  }
+}
+
+
+//blockify messages
+#block-blockify-blockify-messages{
+  .content{
+    max-height:100px;
+    height:auto;
+    overflow:hidden;
+    border:1px solid $red;
+  }
+}
+

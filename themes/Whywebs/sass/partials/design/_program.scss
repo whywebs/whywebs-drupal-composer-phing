@@ -1,0 +1,93 @@
+.views-field-field-program,
+.field-name-field-program {
+  .field-collection-view {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .field-collection-container {
+    border: none;
+    margin: 0;
+  }
+  .field-name-field-day {
+    font-size: 18px;
+    font-family: $font-heading;
+    color: $orange;
+  }
+  
+  .field-collection-item-field-session {
+    border: solid 1px $border-color;
+    padding: 1em 1em 1em 1em;
+    margin-top: -1px;
+    @include breakpoint($tablet) {
+      padding-left: 20%;
+    }
+  }
+  .field-name-field-session-time {
+    font-family: $font-heading;
+    @include breakpoint($tablet) {
+      float: left;
+      width: 20%;
+      margin-left: -24%;
+    }
+  }
+  .field-name-field-session-title {
+    font-size: 18px;
+    font-family: $font-heading;
+    color: $red;
+  }
+  .field-name-field-session-description {
+    margin-bottom: 0.5em;
+  }  
+  .field-name-field-name-speaker {
+    font-size: 18px;
+    font-family: $font-heading;
+    color: $red;
+  }
+  .field-collection-item-field-speaker-info {
+    margin-bottom: 0.5em;
+    @include breakpoint($tablet) {
+      padding-left: 120px;
+    }
+  }
+  .field-name-field-image-speaker {
+    text-align: left;
+    margin-bottom: 0;
+    img {
+      border-radius: 50%;
+      border: solid 2px $orange;  
+    }
+    @include breakpoint($tablet) {
+      margin-right: 0.5em;
+      float: left;
+      margin-left: -120px;
+    }
+  }
+  .field-label {
+    font-family: $font-heading;
+    font-weight: $normal;
+    @include breakpoint($tablet) {
+      padding-left: 120px;
+    }
+  }
+  .field-collection-container .field-items .field-item {
+    margin-bottom: -1px;
+  }
+  .view-mode-full {
+    margin-bottom: 1em;
+    .view-mode-full {
+      margin-bottom: 0;
+    }
+  }
+  .clearfix {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.node-event .field-collection-container {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}

@@ -1,0 +1,271 @@
+#highlight {
+  padding: 0;
+  background-size:100%;
+  color: $white;
+  min-height:600px;
+  .wrapper {
+    padding: 2em 0 5em 0;
+    min-height:600px;
+    @include breakpoint($tablet) {
+    min-height:600px;
+      padding: 2em 0;
+      background-size: auto auto;
+      background-position: right bottom;
+    }
+  }
+  .block {
+    @include clearfix;
+    background: url(../img/b_sun.png) no-repeat right top;
+    background-size: auto 20%;
+    > .content {
+      clear: both;
+      display:inline-block;
+      @include breakpoint($tablet-only) {
+        @include grid-span(3,1);
+        max-width:300px;
+        overflow:vertical;
+      }
+      @include breakpoint($desktop) {
+        @include grid-span(6,1);
+      }
+    }
+  }
+  
+  h1 {
+    font-size: 80px;
+    @include breakpoint($tablet) {
+      font-size: 142px;
+    }
+  }
+}
+
+
+#main_title {
+  background: $red;
+  padding: 4em 1em 1em 1em;
+  color: $white;
+  h1 {
+    font-family:FuturaBT-heavy, sans-serif;
+    font-size:30px;
+  }
+  @include breakpoint($mobile){
+    h1 {
+      font-family:FuturaBT-heavy, sans-serif;
+      font-size:20px;
+    }
+  }
+}
+
+#top_main_intro {
+@include breakpoint($mobile) {
+  display:none;
+  }
+  background: $grey;
+  padding: 2px 0px;
+  @include breakpoint($tablet) {
+    padding: 1em 0;
+  }
+}
+#main_intro {
+  background: $grey;
+  padding: 1em 0;
+  @include breakpoint($tablet) {
+    padding: 2em 0;
+  }
+}
+
+#cta {
+  background: $grey;
+  padding: 1em 0;
+  @include breakpoint($tablet) {
+    padding: 2em 0;
+  }
+}
+
+#main {
+  padding: 2em 0;
+  @include breakpoint($tablet) {
+    padding: 4em 0;
+  }
+}
+
+#sidebar-second {
+  padding-top: 2em;
+  @include breakpoint($tablet) {
+    padding-top: 4em;
+    padding-left: 2em;
+  }
+  .block {
+    margin-bottom: 2em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Front
+
+.front {
+  h2 {
+    color:$dark-grey;
+    text-align: center;
+    @include breakpoint($tablet) {
+      margin-bottom: 2em;
+    }
+  }
+  #main-prefix {
+    .block-block {
+      padding: 2em 0;
+      text-align: center;
+      @include clearfix;
+      h2 {
+        margin-bottom: 20px;
+        @include breakpoint($tablet) {
+        margin-bottom: 100px;
+        }
+      }
+    }
+  }
+  
+  .paragraphs-item-text {
+    .field-name-field-heading {
+      text-align: center;
+    }
+    .field-name-field-body {
+      @include breakpoint($tablet-only) {
+        @include grid-span(4, 2);
+        text-align: center;
+        clear: both;
+      }
+      @include breakpoint($desktop) {
+        @include grid-span(8, 3);
+        text-align: center;
+        clear: both;
+      }  
+    }  
+  }
+  
+  #block-views-homepage-content-block {
+    h2 {
+      margin-top: 2em;
+      @include breakpoint($tablet) {
+      }
+    }
+  }
+  .paragraphs-items {
+    .entity-paragraphs-item {
+      @include breakpoint($tablet) {
+        padding: 4em 0;
+      }
+      .field-name-field-heading {
+        margin-bottom: 0;
+      }   
+    } 
+  }
+}
+
+// services
+
+#block-views-services-block-1 {
+  @include grid;
+}
+
+//store 
+
+.page-store {
+  #cta {
+    background: #d8d9dd;
+    padding: 1em 0;
+  }
+}
+
+.store-tabs {
+  ul.menu {
+    text-align: center;
+    list-style: none;
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      
+      a {
+        font-size: 22px;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        color: #706f72;
+        margin-left: 35px;
+        line-height: 1;
+        &:after {
+          content: " ";
+          border-radius: 50%;
+          width: 17px;
+          height: 17px;
+          border: solid 2px #b5b5b5;
+          display: inline-block;
+          position: relative;
+          top: -0px;
+          margin-left: 20px;
+          @include transition;
+        }
+        &:hover,
+        &.active {
+          &:after {
+            background: $red;
+          }
+        }
+      }
+    }
+  }
+}
+  
+  //Drupal alert timer for any alert within the post
+  div{
+          .error{
+
+            opacity:0.9;
+            transition: 10s 0.6s;
+          }
+          .status{
+            display:block;
+            z-index:888;
+            min-width:350px;
+            min-height:350px;
+            height:auto;
+            padding:30px;
+            top:20%;
+            left:40%;
+            border:2px solid $red;
+            opacity:0.9;
+            background:$white;
+            background-size:cover;
+            transition: 5s 0.9s;
+          }
+  }
+
+
+/////////grid or homepage grid view
+table{
+    opacity:0.8;
+    width:90%;
+    color:$dark;
+          tbody{
+            tr{
+
+              td{
+                border: 1px solid $black;
+                display: inline-block;
+                max-width: 30%;
+                background: $white;
+                margin:10px;
+                padding:5px;
+                height:auto;
+              max-height:250px !important;
+              overflow:scroll;
+                -webkit-box-shadow: 0px 6px 23px 9px rgba(0,0,0,0.56);
+                -moz-box-shadow: 0px 6px 23px 9px rgba(0,0,0,0.56);
+                box-shadow: 0px 6px 23px 9px rgba(0,0,0,0.56);
+              }
+              }
+          }
+}
+

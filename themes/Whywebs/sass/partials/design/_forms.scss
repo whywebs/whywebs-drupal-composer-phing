@@ -1,0 +1,149 @@
+.block-webform,
+.node {
+  .webform-client-form {
+    @include clearfix;
+    > div {
+      @include breakpoint($desktop) {
+        @include grid-span(6, 2);
+      }
+    }
+  }  
+}
+.webform-client-form {
+  div{
+    &.webform-center{
+      @include breakpoint($desktop) {
+                @include grid-span(6, 3);
+                max-width:30%;
+       } 
+    }
+    &.webform-center-smaller{
+
+    }
+  }
+  input.form-text {
+    border: none;
+    border-bottom: solid 2px $border-color;
+    width: 100%;
+  }
+  .webform-component-textarea {
+    margin-bottom: 0;
+  }
+  .form-actions {
+    margin-top: 0;
+    input.form-submit {
+      background: $red;
+      border-radius: 0;
+      width: 100%;
+      text-align: left;
+      &:hover {
+        background: darken($red, 10%);
+      }
+    }
+  } 
+}
+.say-hello-title{
+  @include breakpoint($desktop) {
+      width:20%;
+       @include grid-span(9,4);
+    }
+    @include breakpoint($mobile) {
+      width:70%;
+      }
+      @include breakpoint($medium) {
+      width:40%;
+      }
+}
+.say-hello{
+
+      .paragraphs-items{
+          @include breakpoint($desktop) {
+              @include grid-span(6, 3);
+          } 
+      }
+
+      .webform-client-form{
+      @include breakpoint($desktop) {
+              @include grid-span(6, 7);
+            } 
+      }
+}
+.webform-center-1{
+     .webform-client-form {
+      @include breakpoint($desktop) {
+      width:30%;
+       @include grid-span(8,5);
+    }
+    @include breakpoint($mobile) {
+      width:80%;
+      }
+      @include breakpoint($medium) {
+      width:40%;
+      }
+}
+}
+.text-center{
+      text-align:center;  
+}
+
+.webform-center-bottom{
+  padding-top:50px;
+   @include breakpoint($desktop){margin-left:10%;}
+      width:100%;
+      text-align:100%;
+      width:100%;
+        .webform-component-radios{
+        width:100%;
+          label{
+            float:left;
+             display:inline-block;
+             padding:5px;
+          }
+          .form-item,option{ 
+              label{
+              padding:5px;
+              text-align:center;
+              float:left;
+                   display:inline-block;
+                   position:relative;
+              }
+              input{
+              padding:5px;
+              text-align:center;
+              float:left;
+                   display:inline-block;
+                   position:relative;
+                }
+      }
+          }
+          h2{
+          padding-left:10%;
+          font-size:22px;
+          @include clearfix;
+            @include breakpoint($desktop) {
+              @include grid-span(6, 3.5);
+            }
+          }
+        #edit-submitted-name,#edit-submitted-company{
+        float:left;
+        border:1px solid;
+        width:25%;
+        margin:0;
+        display:inline-block;
+         position:relative;
+        }
+        #edit-submitted-e-mail{
+        float:left;
+        border:1px solid;
+        width:35%;
+        position:relative;
+        display:inline-block;
+        }
+        .form-actions{
+        width:15%;
+        input{height:42px;font-size:80%;}
+        float:right;
+         display:inline-block;
+         position:relative;
+        }
+}

@@ -1,0 +1,126 @@
+.paragraphs-items {
+  
+  .entity-paragraphs-item {
+    @include clearfix;
+    padding: 1em 0em;
+    border-bottom: solid 1px $border-color;
+    &:last-of-type {
+      border: none;
+    }
+    @include breakpoint($tablet) {
+      padding: 2em 0;
+    }
+    > .content {
+      @include grid;
+    }
+    .field {
+      clear: both;
+      
+      ul {
+        list-style: disc outside;
+        margin-left: 15px;
+      }
+    }
+    .field-name-field-heading {
+      margin-bottom: 0px;
+    }
+  }
+  
+  // hide intro wrapper cause its shown in a view
+  .paragraphs-item-intro {
+    display: none;
+  }
+  
+  // text center
+  .paragraphs-item-text-center {
+    .field {
+      @include breakpoint($tablet-only) {
+        @include grid-span(4, 2);
+        text-align: center;
+        clear: both;
+      }
+      @include breakpoint($desktop) {
+        @include grid-span(8, 3);
+        text-align: center;
+        clear: both;
+      }  
+    }
+  }
+  
+  // list 
+  .paragraphs-item-list {
+    .field-name-field-body,
+    .field-name-field-heading {
+      @include breakpoint($tablet-only) {
+        @include grid-span(4, 2);
+        text-align: center;
+        clear: both;
+      }
+      @include breakpoint($desktop) {
+        @include grid-span(8, 3);
+        text-align: center;
+        clear: both;
+      }  
+    }
+    .field-name-field-body {
+      margin-bottom: 40px;  
+    }
+    .field-name-field-list-item {
+      @include breakpoint($tablet) {
+        column-count: 2;
+        column-gap: 80px;
+      }
+      .field-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  // header image
+  
+  .paragraphs-item-header-image {
+    text-align: center;
+  }
+  
+  // text and image 
+  
+  .paragraphs-item-text-and-image {
+    .field-name-field-content-image {
+       @include breakpoint($medium) {
+        text-align: center;
+      }
+      @include breakpoint($desktop) {
+        @include float-span(6);
+      }
+    }
+    .field-name-field-heading,
+    .field-name-field-body {
+      @include breakpoint($tablet-only) {
+//         @include float-span(3, 'last');
+      }
+      @include breakpoint($desktop) {
+        @include float-span(6, 'last');
+      }
+    }
+  }
+  
+  // two column
+  
+  .paragraphs-item-text-two-column {
+    ul {
+      color: $orange;
+    }
+    .field-name-field-left {
+      margin-bottom: 20px;
+      @include breakpoint($desktop) {
+        @include float-span(6);
+      }
+    }
+    .field-name-field-right {
+      @include breakpoint($desktop) {
+        @include float-span(6, 'last');
+      }
+    }
+  }
+  
+}

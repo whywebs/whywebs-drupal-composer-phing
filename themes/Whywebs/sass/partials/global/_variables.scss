@@ -1,0 +1,135 @@
+// Variables
+
+// Table of contents
+// =============================
+// Global
+// Colors
+// Body
+// Links
+// Breakpoints & widths
+// Typography
+// Forms
+// Buttons
+// =============================
+
+
+// Global
+
+$border-radius: 3px;
+
+
+// Colors
+//
+// Colors, Brandcolors, Greys & Basecolors
+
+$black:            #55565a;
+$dark:             #032B2F;
+$blue:             #00688b;
+$blue-light:       #56B1BF;
+$red:              #8b3e2f;
+//$white:          #D0D3C5;
+$white:			   #ffffff;
+$orange:           #D73A31;
+
+$color-facebook:   #3b5998;
+$color-google:     #d6492c;
+$color-linkedin:   #4875b4;
+$color-pinterest:  #900;
+$color-skype:      #12a5f4;
+$color-tumblr:     #2b4964;
+$color-twitter:    #3cf;
+$color-vimeo:      #06b8ec;
+$color-youtube:    #f33;
+
+$dark-grey:        #4f5054;
+$grey:             #f2f2f2;
+$grey-light:       tint($grey, 30%);
+$grey-lighter:     tint($grey, 20%);
+$grey-lightest:    tint($grey, 10%);
+
+$primary:          $red;
+$secondary:        $blue;
+
+
+// Body
+
+$body-bg:          $white;
+$text-color:       $black;
+
+
+// Links
+
+$link:             $red;
+$link-hover:       darken($red, 10%);
+$visited:          $link;
+
+
+// Breakpoints & widths
+
+$mobile:           max-width 468px;
+$tablet:           775px;
+$tablet-only:      775px 960px;
+$medium:           max-width 960px;
+$m-tablet:		   max-width 960px;
+$desktop:          960px;
+$large:            1200px;
+$events-left:	40%;
+$events-right:	59%;
+
+$min-width:        300px;
+$max-width:        1400px;
+
+
+// Typography
+//
+// Fonts, font-sizes, headings, line-heights, font-weights
+
+
+$arial:					Arial, "Nimbus Sans L", sans-serif;
+$helvetica:			"Helvetica", Arial, "Nimbus Sans L", sans-serif;
+$futura-medium: 'FuturaBT-Medium', sans-serif;
+$dinerdotcom: 'CocktailScript', sans-serif;
+$futura: 'FuturaBT-Book', sans-serif;
+$futura-heavy: 'FuturaBT-book', sans-serif;
+$icon:  'fontello';
+$kinescope:  'kinescope';
+
+$font-base:    $futura;
+$font-heading: $futura-heavy;
+$font-heading-alt: $kinescope;
+
+$font-size-root:  18px;
+$font-size-base:  1rem;
+$font-size-large: 1.25rem;
+$font-size-small: .875rem;
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+$line-height: 1.4;
+
+$light:  200;
+$normal: 300;
+$bold:   400;
+
+
+// Forms
+
+$input-bg:           $white;
+$input-color:        $grey;
+$input-border-color: $grey-lighter;
+
+
+// Buttons
+
+$btn-primary-color:  $white;
+$btn-primary-bg:     $secondary;
+$btn-primary-border: $secondary;
+
+// border
+
+$border-color: #d8d9dd;

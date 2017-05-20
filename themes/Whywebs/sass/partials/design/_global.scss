@@ -1,0 +1,122 @@
+html {
+  font-size: $font-size-root;
+}
+
+body {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  font-weight: $normal;
+  line-height: $line-height;
+  color: $text-color;
+  background: $body-bg;
+  #content{
+    min-height:560px;
+      @include breakpoint($mobile){
+       min-height:350px;
+      }
+      @include breakpoint($medium){
+       min-height:380px;
+      }
+  }
+  //play with the screen when the menu is left
+  &.menu-left{
+    margin-left:80px;
+    widht:80%;
+    #content{
+        
+      @include breakpoint($mobile){
+       widht:80%;
+       margin-left:80px;
+      }
+      @include breakpoint($medium){
+       widht:80%;
+       margin-left:80px;
+      }
+  }
+  }
+
+}
+
+p,
+pre {
+  margin: 0 0 1em 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $link;
+  @include transition;
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+h1 {
+  font-family: $font-heading-alt;
+  font-size: 40px;
+  color: $white;
+  font-weight: $normal;
+}
+
+h2, h3, h4 {
+  font-family: $font-heading;
+  color: $blue;
+}
+
+h2 {
+  color: $blue;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 22px;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+// tabs 
+
+ul.primary {
+  margin: 10px 0 0 0;
+  li {
+    display: inline-block;
+    a {
+      border-radius: 3px 3px 0 0;
+      padding: 0.5em 1em;
+      display: inline-block;
+    }
+  }
+}
+
+// ui widget
+
+.ui-widget {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  font-weight: $normal;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+// buttons
+
+.button,
+input.form-submit {
+  @include button;
+}
+
+// forms
+
+textarea.form-textarea,
+input.form-text {
+  border: solid 2px $border-color;
+  padding: 0.5em 0.5em;
+  line-height: 1;
+  font-family: $font-base;
+}

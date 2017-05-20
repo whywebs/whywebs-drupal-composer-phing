@@ -27,10 +27,10 @@
     "bin-dir": "vendor/bin"
   },
   "scripts": {
-    "pre-create-project-cmd": [
+    "post-create-project-cmd": [
             "phing -debug"
         ],
-    "pre-install-cmd": [
+    "post-install-cmd": [
             "phing -debug"
         ],
     "lint": [

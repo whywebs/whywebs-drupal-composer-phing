@@ -289,7 +289,6 @@
                 <echo msg="Compiling SCSS..." />
                 <exec command="compass compile ${absname}" logoutput="true" checkreturn="true" />
                 
-<!--                <!-- Or use the command below -->-->
 <!--                <echo msg="Installing npm for each theme..." />-->
 <!--                <exec command="npm install" dir="${absname}" logoutput="true" checkreturn="true" />-->
             </then>

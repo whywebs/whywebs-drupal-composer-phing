@@ -48,7 +48,6 @@
     dockerInstall,
     drupal:drush:make,
     drupal:cleanup-temp,
-    drupal:compass:compile,
     drupal:overwrite,
     drupal:move,
     drupal:chmod"
